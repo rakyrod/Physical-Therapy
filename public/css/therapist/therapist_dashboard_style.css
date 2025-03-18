@@ -1,0 +1,77 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111827;
+    color: #fff;
+}
+
+.card {
+    background-color: #1f2937;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.appointment-card {
+    transition: transform 0.3s ease;
+}
+
+.appointment-card:hover {
+    transform: translateY(-5px);
+}
+
+.modal {
+    transition: opacity 0.25s ease;
+}
+
+.badge-blue { background-color: rgba(59, 130, 246, 0.2); }
+.badge-green { background-color: rgba(16, 185, 129, 0.2); }
+.badge-red { background-color: rgba(239, 68, 68, 0.2); }
+.badge-yellow { background-color: rgba(245, 158, 11, 0.2); }
+.badge-purple { background-color: rgba(139, 92, 246, 0.2); }
+
+.text-blue { color: #3b82f6; }
+.text-green { color: #10b981; }
+.text-red { color: #ef4444; }
+.text-yellow { color: #f59e0b; }
+.text-purple { color: #8b5cf6; }
+
+.bg-blue-bar { background-color: #3b82f6; }
+.bg-green-bar { background-color: #10b981; }
+.bg-red-bar { background-color: #ef4444; }
+.bg-yellow-bar { background-color: #f59e0b; }
+.bg-purple-bar { background-color: #8b5cf6; }
+
+.notifications-dropdown {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.notification-item:hover {
+    background-color: #374151;
+}
+
+.notification-unread {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Animation for new appointments */
+@keyframes highlight {
+    0% { background-color: rgba(59, 130, 246, 0.3); }
+    100% { background-color: transparent; }
+}
+
+.highlight-new {
+    animation: highlight 2s ease-out;
+}

@@ -1,0 +1,40 @@
+
+[x-cloak] { display: none !important; }
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.card-shadow:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.tab-active {
+    border-bottom: 3px solid #0087ff;
+    color: #0087ff;
+    font-weight: 600;
+}
+
+.tab-inactive {
+    border-bottom: 3px solid transparent;
+    color: #6b7280;
+}
+
+.tab-inactive:hover {
+    color: #4b5563;
+    background-color: #f9fafb;
+}
+
+.input-focus {
+    border-color: #0087ff;
+    box-shadow: 0 0 0 3px rgba(0, 135, 255, 0.25);
+}
+
+.custom-gradient {
+    background: linear-gradient(to right, #0050b0, #0087ff, #0050b0);
+}

@@ -1,0 +1,52 @@
+
+    /* Custom animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .specialty-item {
+      animation: fadeIn 0.5s ease-out;
+      transition: all 0.3s ease;
+    }
+    
+    /* Card hover effects */
+    .specialty-card {
+      transition: all 0.3s ease;
+    }
+    
+    .specialty-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .learn-more-btn {
+      position: relative;
+      transition: all 0.2s ease;
+    }
+    
+    .learn-more-btn:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #0e4991;
+      transition: width 0.3s ease;
+    }
+    
+    .learn-more-btn:hover:after {
+      width: 100%;
+    }
+    
+    /* Search input focus styles */
+    .search-input:focus {
+      box-shadow: 0 0 0 3px rgba(14, 73, 145, 0.2);
+    }
+    
+    /* Header gradient */
+    .header-gradient {
+      background-image: linear-gradient(to bottom, rgba(14, 73, 145, 0.95) 0%, rgba(14, 73, 145, 0.85) 40%, rgba(14, 73, 145, 0.7) 70%, rgba(14, 73, 145, 0) 100%);
+    }
+  

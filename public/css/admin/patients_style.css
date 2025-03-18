@@ -1,0 +1,241 @@
+
+:root {
+    --primary: #b5e4ff;
+    --primary-dark: #0578ff;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ios-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(5, 120, 255, 0.06);
+    transition: all 0.2s ease-in-out;
+}
+
+.ios-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(5, 120, 255, 0.12);
+}
+
+.ios-input {
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 12px 16px;
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.ios-input:focus {
+    border-color: var(--primary-dark);
+    box-shadow: 0 0 0 4px rgba(5, 120, 255, 0.15);
+}
+
+.ios-badge {
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0082cd;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0069a7;
+}
+
+.action-btn {
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal and Toast Styles */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.modal-backdrop.show .modal {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.toast {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 350px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast.success { background-color: white; border-left: 4px solid #10b981; }
+.toast.error { background-color: white; border-left: 4px solid #ef4444; }
+.toast-header { border-bottom: 1px solid #e5e7eb; }
+.toast.success .toast-header { color: #10b981; }
+.toast.error .toast-header { color: #ef4444; }
+
+/* Custom Table Styles to match therapist.php */
+#patientsTable {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    color: white;
+}
+
+#patientsTable thead th {
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #1e293b;
+}
+
+#patientsTable tbody tr {
+    background-color: #0f172a;
+    border-bottom: 1px solid #1e293b;
+    transition: all 0.2s;
+}
+
+#patientsTable tbody tr:hover {
+    background-color: #1e293b;
+}
+
+#patientsTable tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.dataTables_wrapper .dataTables_length, 
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+    color: #94a3b8 !important;
+    font-size: 0.875rem !important;
+    padding: 0.5rem 0;
+}
+
+.dataTables_wrapper .dataTables_length select,
+.dataTables_wrapper .dataTables_filter input {
+    background-color: #1e293b !important;
+    color: white !important;
+    border: 1px solid #334155 !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 0.75rem !important;
+    margin-left: 0.5rem;
+    font-size: 0.875rem !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    width: 200px !important;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+    outline: none !important;
+}
+
+table.dataTable tbody tr {
+    background-color: transparent !important;
+    color: white !important;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    border-bottom: 1px solid #1e293b !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #1e293b !important;
+}
+
+/* Custom Pagination Styles (matching therapist.php) */
+#paginationContainer {
+    display: none; /* Initially hidden, will be shown after table loads */
+}
+
+.pagination-link {
+    transition: all 0.2s;
+}
+
+.pagination-link:hover:not(.opacity-50) {
+    background-color: #334155;
+}
+
+/* Hide default DataTables pagination but keep functionality */
+.dataTables_paginate {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Custom styles for empty table state */
+.dataTables_empty {
+    background-color: #0f172a !important;
+    padding: 3rem !important;
+}

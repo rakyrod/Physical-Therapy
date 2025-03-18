@@ -1,0 +1,94 @@
+
+:root {
+    --primary: #b5e4ff;
+    --primary-dark: #0578ff;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #3b82f6;
+}
+
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+}
+
+.dashboard-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(5, 120, 255, 0.06);
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(5, 120, 255, 0.12);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0082cd;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0069a7;
+}
+
+/* Date Range Picker Styles */
+.date-picker {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.date-picker:focus {
+    outline: none;
+    border-color: #0082cd;
+    box-shadow: 0 0 0 2px rgba(0, 130, 205, 0.2);
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-only {
+        display: block !important;
+    }
+    
+    .dashboard-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    .print-container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.print-only {
+    display: none;
+}
